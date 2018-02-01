@@ -8,7 +8,7 @@ export function articleListLoading() {
   };
 }
 
-export function successArticleList(articles) {
+export function articleListSuccess(articles) {
   return {
     type: SUCCESS,
     articles,
