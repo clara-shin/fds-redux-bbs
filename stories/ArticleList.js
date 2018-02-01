@@ -1,8 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+// import { action } from '@storybook/addon-actions';
 import ArticleList from '../src/component/ArticleList';
 // import LoginScreen from '../src/component/LoginScreen';
+
 const articles = [
   {
     id: 'article0',
@@ -17,6 +18,7 @@ const articles = [
     nickName: '김승하',
   },
 ];
+
 const articlesWithLink = articles.map(article => ({
   ...article,
   itemProps: {
@@ -25,6 +27,7 @@ const articlesWithLink = articles.map(article => ({
   },
 }), // 객체
 );
+
 storiesOf('ArticleList', module)
   .add('default', () => (
     <ArticleList articles={articles} />
