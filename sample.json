@@ -1,0 +1,12 @@
+{
+  "articles": {
+    "article0": {
+      "title": "게시글1",
+      "createdAt": 1517453812176
+    },
+    "article1": {
+      "title": "게시글2",
+      "createdAt": 1517453812176
+    }
+  }
+}
