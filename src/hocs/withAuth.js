@@ -17,7 +17,7 @@ export default function withAuth(WrappedComponent) {
 
     componentWillMount() {
       // mount되기 직전에 실행됨
-      const currentUser = firebase.auth().currentUser;
+      const { currentUser } = firebase.auth();
       if (currentUser) {
         this.setState({
           currentUser,
@@ -27,13 +27,13 @@ export default function withAuth(WrappedComponent) {
         this.setState({
           loading: true,
         });
-
-        const unsubscribe = firebase.auth().onAuthStateChanged((user) => { // 인증상태 변경 구독중인걸 풀어줘야함 .subscribe()
+        const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+          // 인증상태 변경 구독중인걸 풀어줘야함 .subscribe()
           // https://firebase.google.com/docs/reference/js/firebase.auth.Auth?authuser=0#onAuthStateChanged
           unsubscribe(); // 인정상태 변경 구독취소
           if (user) {
             this.setState({
-              currentUser: user,
+              currentUser: user.id,
               loading: false, // 로딩인디케이터 끔
             });
           } else {

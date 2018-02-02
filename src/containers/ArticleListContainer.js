@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import ArticleList from '../component/ArticleList';
 import { fetchArticleList } from '../ducks/articleList';
-
 import withLoading from '../hocs/withLoading';
+
+import ArticleList from '../component/ArticleList';
+
+
 const ArticleListWithLoading = withLoading(ArticleList);
 
 class ArticleListContainer extends Component {
@@ -19,7 +21,7 @@ class ArticleListContainer extends Component {
   render() {
     const { onMount, ...rest } = this.props;
     return (
-      <ArticleListWithLoading { ...rest } />
+      <ArticleListWithLoading {...rest} />
     );
   }
 }

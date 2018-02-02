@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { List } from 'semantic-ui-react';
-import withLoading from '../hocs/withLoading';
+// import withLoading from '../hocs/withLoading';
 
-const ArticleListWithLoading = withLoading(ArticleList);
+// const ArticleListWithLoading = withLoading(ArticleList);
 
 
 export default class ArticleList extends Component {
