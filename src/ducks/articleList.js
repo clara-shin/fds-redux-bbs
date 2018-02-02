@@ -1,7 +1,7 @@
 import * as firebase from 'firebase';
 
 export const LOADING = 'articleList/LOADING';
-const SUCCESS = 'articleList/SUCCESS';
+export const SUCCESS = 'articleList/SUCCESS';
 
 export function articleListLoading() {
   return {
@@ -38,14 +38,14 @@ export default function (state = initialState, action) {
   }
 }
 
-export const fecthArticleList = () => async (dispatch) => {
+export const fetchArticleList = () => async (dispatch) => {
   dispatch(articleListLoading());
   const snapshot = await firebase.database().ref('articles').once('value');
-  const articlesObj = snapshot.val();
-  const articles = Object.entries(articlesObj).map(([id, article]) => ({
+  const articleObj = snapshot.val();
+  const articles = Object.entries(articleObj).map(([id,article]) => ({
     ...article,
     id,
-    nickName: '신혜진', // FIXME
+    nickName:'신혜진' //FIXME
   }));
   dispatch(articleListSuccess(articles));
 };

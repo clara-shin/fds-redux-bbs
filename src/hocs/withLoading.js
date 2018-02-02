@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Dimmer, Loader } from 'semantic-ui-react';
-import { LOADING } from '../ducks/articleList';
+
 
 export default function withLoading(WrappedComponent) {
   return class extends Component {
