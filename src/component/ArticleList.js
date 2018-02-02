@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import { List } from 'semantic-ui-react';
+import withLoading from '../hocs/withLoading';
+
+const ArticleListWithLoading = withLoading(ArticleList);
+
 
 export default class ArticleList extends Component {
   static defaultProps = {
     articles: [],
-    onMount: () => {},
+    // onMount: () => {},
   }
-  // life-cycle hook
-  componentDidMount() {
-    this.props.onMount();
-  }
+
+  // componentDidMount() {
+  //   this.props.onMount();
+  // }
+
   render() {
     const { articles } = this.props;
     return (
