@@ -1,0 +1,13 @@
+[debug] [2018-02-08T03:31:06.712Z] ----------------------------------------------------------------------
+[debug] [2018-02-08T03:31:06.716Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Hyejin\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only functions
+[debug] [2018-02-08T03:31:06.717Z] CLI Version:   3.17.4
+[debug] [2018-02-08T03:31:06.717Z] Platform:      win32
+[debug] [2018-02-08T03:31:06.717Z] Node Version:  v6.12.3
+[debug] [2018-02-08T03:31:06.718Z] Time:          Thu Feb 08 2018 12:31:06 GMT+0900 (대한민국 표준시)
+[debug] [2018-02-08T03:31:06.718Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-08T03:31:06.735Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-08T03:31:06.735Z] > authorizing via signed-in user
+[debug] [2018-02-08T03:31:06.738Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/fds-redux-bbs-0130  
+  
+ Thu Feb 08 2018 12:31:06 GMT+0900 (대한민국 표준시)
